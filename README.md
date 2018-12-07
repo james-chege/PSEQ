@@ -1,0 +1,2 @@
+# PSEQ
+A sequelize project
