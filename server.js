@@ -22,10 +22,36 @@ const User  = connection.define('User', {
     primaryKey: true,
     defaultValue: Sequelize.UUIDV4
   },
-  name: Sequelize.STRING,
-  bio: Sequelize.TEXT
+  name: {
+    type: Sequelize.STRING,
+    validate: {
+      len: [3]
+    }
+  },
+  bio: {
+    type: Sequelize.TEXT,
+    validate: {
+      contains: {
+        args: ['foo'],
+        msg: 'Error: Field must contain foo'
+      }
+    }
+  }
 }, {
   timestamps: false
+})
+
+app.get('/', (req, res) => {
+  User.create({
+    name: 'Jo',
+    bio: 'New bio entry'
+  })
+      .then(user => {
+        res.json(user);
+      })
+      .catch(error => {
+        res.status(404).send(error);
+      })
 })
 
 connection
@@ -33,10 +59,10 @@ connection
     logging: console.log,
     force: true
   }).then(() => {
-    User.create({
-      name: 'Joe',
-      bio: 'New bio entry'
-    })
+    // User.create({
+    //   name: 'Joe',
+    //   bio: 'New bio entry'
+    // })
 })
   .then(
   () => {
