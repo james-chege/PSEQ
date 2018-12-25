@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.eslintrc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="338">
+              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -194,7 +194,7 @@
       <workItem from="1545660744658" duration="44000" />
       <workItem from="1545660803054" duration="445000" />
       <workItem from="1545661267013" duration="496000" />
-      <workItem from="1545663742844" duration="2447000" />
+      <workItem from="1545663742844" duration="2695000" />
     </task>
     <task id="LOCAL-00001" summary="feat(crud) add crud operations">
       <created>1545637223304</created>
@@ -231,11 +231,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545738948079</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(crud) add crud operations">
+      <created>1545739003668</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545739003668</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(crud) add crud operations">
+      <created>1545739093547</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545739093547</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46158000" />
+    <option name="totallyTimeSpent" value="46406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -345,8 +359,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="338">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
         </state>
       </provider>
     </entry>
