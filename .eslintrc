@@ -3,6 +3,7 @@
 
 {
   "extends": ["airbnb", "prettier", "prettier/react"],
+  "esversion": 6,
   "presets": ["env"],
   "plugins": ["prettier"],
   "parser": "babel-eslint",
