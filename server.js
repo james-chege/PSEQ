@@ -2,9 +2,9 @@ import connection from './connection';
 
 const express = require('express');
 const Sequelize = require('sequelize');
-const _USERS = require('./users');
+// const _USERS = require('./users');
 
-const Op = Sequelize.Op;
+const { Op } = Sequelize;
 
 const app = express();
 const port = 8001;
@@ -144,6 +144,38 @@ app.post('/post', (req, res) => {
     });
 });
 
+app.put('/addWorker', (req, res) => {
+  Project.findById(2)
+    .then((project) => {
+      project.addWorkers(5);
+      res.send('User added');
+    })
+    .then(() => {
+      res.send('User  added ');
+    })
+    .catch((error) => {
+      console.log(error)
+      res.status(404).send(error);
+    });
+});
+
+app.get('/getUserProjects', (res, req) => {
+  User.findAll({
+    attributes: ['name'],
+    include: [{
+      model: Project, as: 'Tasks',
+      attributes: ['title']
+    }]
+  })
+    .then((output) => {
+      console.log(req)
+      res.json5(output);
+    })
+    .catch((error) => {
+      console.log(error)
+      res.status(404).send(error);
+    })
+})
 Post.belongsTo(User, { as: 'UserRef', foreignKey: 'userid' }); // puts foreign user( one to one relationship )
 Post.hasMany(Comment, { as: 'All_Comments' }); // foreignKey = PostId in Comment table( one to many relationship )
 
@@ -227,4 +259,5 @@ Comment.create({
     },
   ).catch((err) => {
     console.error('Unable to establish connection to the database');
+    console.log(err)
   });
