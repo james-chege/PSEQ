@@ -6,7 +6,8 @@
   },
   "plugins": [
     "react",
-    "prettier"
+    "prettier",
+    "import"
   ],
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "prettier/react"],
@@ -14,8 +15,7 @@
     "sourceType": "module",
     "allowImportExportEverywhere": true,
     "codeFrame": true,
-    "esversion": 6,
-    "ecmaVersion":2015,
+    "ecmaVersion":2016,
     "ecmaFeatures":{
       "jsx": true
     }
